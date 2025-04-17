@@ -10,7 +10,7 @@ mongoose.connect("mongodb+srv://snowflakeske:0TMpo8GN2sMeCOxy@cluster0.c0zhj1g.m
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(cookieParser());
-app.use("/uploads", express.static(__dirname+"/uploads")); // For getting images that are downloaded by link
+app.use("/uploads", express.static(__dirname+"/uploads")); 
 
 app.use(cors({
     credentials: true,
