@@ -5,6 +5,8 @@ const cookieParser = require("cookie-parser");
 require("dotenv").config();
 const app = express();
 
+const port = 5555;
+
 mongoose.connect("mongodb+srv://snowflakeske:0TMpo8GN2sMeCOxy@cluster0.c0zhj1g.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
 
 app.use(express.urlencoded({extended:true}));
@@ -29,6 +31,6 @@ app.get('/', (req, res) => {
     res.send('Hey this is my API running 🥳')
 })
 
-app.listen(process.env.PORT || 5000, () => {
+app.listen(port, () => {
     console.log('Server is running on port 5000');
 });
