@@ -14,7 +14,7 @@ const PasswordElement = forwardRef((props, ref) => {
                     className="border border-[#C4C4C4] rounded-full py-2 px-4 w-full placeholder:text-[#C4C4C4]" 
                     type={show ? "text" : "password"}
                     ref={ref}
-                    placeholder="Passowrd"
+                    placeholder="Password"
                     required
                 />
                 <div onClick={togglePassword} className="cursor-pointer absolute top-4 right-5">

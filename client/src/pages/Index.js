@@ -33,7 +33,7 @@ const Index = () => {
 
             const debounceTimeout = setTimeout(()=>{
 
-                axios.get(`/getSearchedPlace/?search=${searchPlace}`)
+                axios.get(`https://jqgfxdzd-5555.inc1.devtunnels.ms/getSearchedPlace/?search=${searchPlace}`)
                 .then(response => {
                     const {data} = response;
                     setPlaces(data);
@@ -74,7 +74,7 @@ const Index = () => {
 
         try
         {
-            const {data} = await axios.get(`/getAllPlaces/?page=${page}`);
+            const {data} = await axios.get(`https://jqgfxdzd-5555.inc1.devtunnels.ms/getAllPlaces/?page=${page}`);
 
             if(data.length === 0)
             {
@@ -132,7 +132,7 @@ const Index = () => {
                     <Link to={`/place/${place._id}`} key={index}>
                         <div className="flex bg-gray-500 rounded-2xl mb-2">
                             {place.photos[0] && (
-                                <img className="rounded-2xl object-cover aspect-square" src={`${process.env.REACT_APP_API_BASE_URL}/uploads/${place.photos[0]}`} alt={place.title}/>
+                                <img className="rounded-2xl object-cover aspect-square" src={`https://jqgfxdzd-5555.inc1.devtunnels.ms/uploads/${place.photos[0]}`} alt={place.title}/>
                             )}
                         </div>
                         <h2 className="font-bold">{place.address}</h2>

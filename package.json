@@ -13,6 +13,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "concurrently": "^9.1.2"
+    "concurrently": "^9.1.2",
+    "firebase-admin": "^13.2.0",
+    "firebase-functions": "^6.3.2"
   }
 }

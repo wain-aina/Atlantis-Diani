@@ -48,7 +48,7 @@ const BookingWidget = ({place}) => {
                     price: numberOfNights * place.price
                 }
         
-                const {data} = await axios.post("/addbooking", booking);
+                const {data} = await axios.post("https://jqgfxdzd-5555.inc1.devtunnels.ms/addbooking", booking);
         
                 setCheckIn("");
                 setCheckOut("");

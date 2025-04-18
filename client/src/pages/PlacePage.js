@@ -13,7 +13,7 @@ const PlacePage = () => {
 
     useEffect(()=>{
 
-        axios.get("/places/"+id)
+        axios.get("https://jqgfxdzd-5555.inc1.devtunnels.ms/places/"+id)
         .then(response => {
             const {data} = response;
             setPlace(data);

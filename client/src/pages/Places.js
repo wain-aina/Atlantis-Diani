@@ -18,7 +18,7 @@ const Places = () => {
 
     useEffect(()=>{
 
-        axios.get("/getUserPlaces")
+        axios.get("https://jqgfxdzd-5555.inc1.devtunnels.ms/getUserPlaces")
         .then(response => {
             const {data} = response;
             setPlaces(data);

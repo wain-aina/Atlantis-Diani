@@ -37,7 +37,7 @@ const Login = () => {
 
         try
         {
-            const {data} = await axios.post("/login", formData);
+            const {data} = await axios.post("https://jqgfxdzd-5555.inc1.devtunnels.ms/login", formData);
             
             const token = data.token;
             localStorage.setItem("airbnb-token", token);

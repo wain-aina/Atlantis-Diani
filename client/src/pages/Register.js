@@ -62,7 +62,7 @@ const Register = () => {
             
             try
             {
-                await axios.post("/register",formData);
+                await axios.post("https://jqgfxdzd-5555.inc1.devtunnels.ms/register",formData);
                 toast.success("Registration successfull, Now you can log in");
                 navigate("/login");
 

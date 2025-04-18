@@ -6,7 +6,7 @@ const PlaceImg = ({place, index=0}) => {
     }
 
     return(
-            <img className="object-cover" src={`${process.env.REACT_APP_API_BASE_URL}/uploads/`+place.photos[index]} alt={place.title}/> 
+            <img className="object-cover" src={`https://jqgfxdzd-5555.inc1.devtunnels.ms/uploads/`+place.photos[index]} alt={place.title}/> 
     );
 }
 

@@ -11,7 +11,7 @@ const Profile = () => {
     const {user,setUser} = useContext(UserContext);
 
     const logoutHandler = async() => {
-        const {data} = await axios.get("/logout");
+        const {data} = await axios.get("https://jqgfxdzd-5555.inc1.devtunnels.ms/logout");
 
         localStorage.removeItem("airbnb-token");
         setUser(null);

@@ -15,7 +15,7 @@ const UserContextProvider = (props) => {
             {
                 axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
-                axios.get("/profile")
+                axios.get("https://jqgfxdzd-5555.inc1.devtunnels.ms/profile")
                 .then((response) => {
                     const data = response.data;
                     setUser(data.userData);

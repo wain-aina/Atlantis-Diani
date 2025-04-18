@@ -17,7 +17,7 @@ const Bookings = () => {
 
     useEffect(() => {
 
-        axios.get("/getBookings")
+        axios.get("https://jqgfxdzd-5555.inc1.devtunnels.ms/getBookings")
             .then(response => {
                 const { data } = response;
                 setBookings(data);

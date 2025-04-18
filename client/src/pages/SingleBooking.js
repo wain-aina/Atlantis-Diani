@@ -13,7 +13,7 @@ const SingleBooking = () => {
     
 
     useEffect(()=> {
-        axios.get(`/singleBooking/${id}`)
+        axios.get(`https://jqgfxdzd-5555.inc1.devtunnels.ms/singleBooking/${id}`)
         .then(response => {
             const {data} = response;
             setBooking(data);

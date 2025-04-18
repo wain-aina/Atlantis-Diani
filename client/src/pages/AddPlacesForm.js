@@ -65,7 +65,7 @@ const AddPlacesForm = () => {
     useEffect(()=>{
         if(id)
         {
-            axios.get("/places/"+id)
+            axios.get("https://jqgfxdzd-5555.inc1.devtunnels.ms/places/"+id)
             .then(response => {
                 const {data} = response;
 
@@ -104,7 +104,7 @@ const AddPlacesForm = () => {
     const addPhotoByLink = async(event) => {
         event.preventDefault();
 
-        const {data:filename} = await axios.post("/uploadByLink", {link: state.photoLink});
+        const {data:filename} = await axios.post("https://jqgfxdzd-5555.inc1.devtunnels.ms/uploadByLink", {link: state.photoLink});
         updateStateArray("addedPhotos",filename, false);
 
         updateStateString("photoLink","");
@@ -124,7 +124,7 @@ const AddPlacesForm = () => {
 
         try
         {
-            axios.post("/uploadPhoto", data, {
+            axios.post("https://jqgfxdzd-5555.inc1.devtunnels.ms/uploadPhoto", data, {
                 headers:{"Content-type": "multipart/form-data"}
             })
             .then(response => 
@@ -178,7 +178,7 @@ const AddPlacesForm = () => {
         if(!id)
         {
             // Adding New Place
-            await axios.post("/addNewPlace", placeData);
+            await axios.post("https://jqgfxdzd-5555.inc1.devtunnels.ms/addNewPlace", placeData);
         }
         else
         {
@@ -212,7 +212,7 @@ const AddPlacesForm = () => {
                     {state.addedPhotos.length > 0 && state.addedPhotos.map((link, index) => {
                         return(
                             <div className="h-32 flex relative" key={index} >
-                                <img className="rounded-2xl w-full object-cover position-center" src={`${process.env.REACT_APP_API_BASE_URL}/uploads/${link}`} alt=""/>
+                                <img className="rounded-2xl w-full object-cover position-center" src={`https://jqgfxdzd-5555.inc1.devtunnels.ms/uploads/${link}`} alt=""/>
                                 <FontAwesomeIcon className="absolute bottom-1 right-1 text-white cursor-pointer bg-black bg-opacity-50 rounded-xl p-2" onClick={() => removePhoto(link)} icon={faTrashCan} />
                                 {
                                     link === state.addedPhotos[0] 
