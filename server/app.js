@@ -14,7 +14,7 @@ app.use("/uploads", express.static(__dirname+"/uploads"));
 
 app.use(cors({
     credentials: true,
-    origin: [ 'http://localhost:3000' ],
+    origin: [ 'https://atlantis-diani.netlfiy.app' ],
 }));
 
 const userAuthRoutes = require("./routes/userAuthRoutes");
